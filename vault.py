@@ -4,6 +4,7 @@ import os
 import requests
 import datetime
 import sys
+import json
 from simple_term_menu import TerminalMenu
 from urllib3.exceptions import InsecureRequestWarning
 
@@ -76,9 +77,9 @@ def vault_api_call_get(api_endpoint):
   try:
     response = requests.get(vault_addr+api_endpoint, headers=vault_headers, verify=False)
     response.raise_for_status()
-    print(response.json())
-    r = str(response.json())
-    log_file(log_name,r)
+    req = json.dumps(response.json(), indent=2, sort_keys=True)
+    print(req)
+    log_file(log_name,str(req))
   except requests.exceptions.HTTPError as errh:
     print(errh)
   except requests.exceptions.ConnectionError as errc:
@@ -92,9 +93,9 @@ def vault_api_call_post(api_endpoint, post_args):
   try:
     response = requests.post(vault_addr+api_endpoint, headers=vault_headers, data=post_args, verify=False)
     response.raise_for_status()
-    print(response.json())
-    r = str(response.json())
-    log_file(log_name,r)
+    req = json.dumps(response.json(), indent=2, sort_keys=True)
+    print(req)
+    log_file(log_name,str(req))
   except requests.exceptions.HTTPError as errh:
     print(errh)
   except requests.exceptions.ConnectionError as errc:
@@ -104,12 +105,12 @@ def vault_api_call_post(api_endpoint, post_args):
   except requests.exceptions.RequestException as err:
     print(err)
 
-def log_file(log_name,r):
+def log_file(log_name,req):
     now = datetime.datetime.now()
     timestamp = str(now.strftime("%Y%m%d_%H:%M:%S"))
     try:
       f = open(log_name+'_'+timestamp, 'a')
-      f.write(r)
+      f.write(req)
       f.close
     except Exception as err:
       print(str(err))
