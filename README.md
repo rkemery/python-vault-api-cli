@@ -1,5 +1,5 @@
 # python-vault-api-cli
-![Vault Image](https://d1q6f0aelx0por.cloudfront.net/product-logos/library-vault-logo.png)
+![Vault Image](https://icon2.cleanpng.com/20180330/ffw/kisspng-computer-icons-arrow-clip-art-grey-5abdf308abdb95.2679234315223979607039.jpg)
 
 ## Summary
 Vault http api wrapper in python. Currently in early work phase.
