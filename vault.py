@@ -3,7 +3,6 @@
 import os
 import requests
 import datetime
-import time
 import sys
 from simple_term_menu import TerminalMenu
 from urllib3.exceptions import InsecureRequestWarning

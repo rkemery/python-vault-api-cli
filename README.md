@@ -2,12 +2,12 @@
 ![Vault Image](https://d1q6f0aelx0por.cloudfront.net/product-logos/library-vault-logo.png)
 
 ## Summary
-Vault http api wrapper in python.
+Vault http api wrapper in python. Currently in early work phase.
 
 ## Usage
-CLI menu driven currently supports GET and POST methods.
+CLI menu driven, which currently supports GET and POST methods.
 * Input vault_addr variable
-* Input vault_token variable
+* Input vault token under vault_headers variable
 * Profit?
 
 ## Logging
