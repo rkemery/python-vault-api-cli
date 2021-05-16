@@ -6,8 +6,8 @@ Vault http api wrapper in python. Currently in early work phase.
 
 ## Usage
 CLI menu driven, which currently supports GET and POST methods.
-* Input vault_addr variable
-* Input vault token under vault_headers variable
+* Input vault_addr variable.
+* Input vault token under vault_headers variable.
 * Profit?
 
 ## Logging
