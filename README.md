@@ -1,5 +1,5 @@
 # python-vault-api-cli
-![Vault Image](https://amazicworld.com/wp-content/uploads/2019/11/232-2321777_vault-logo-hashicorp-vault-icon-696x527.jpg)
+![Vault Image](https://d1q6f0aelx0por.cloudfront.net/product-logos/library-vault-logo.png)
 
 ## Summary
 Vault http api wrapper in python. Currently in early work phase.
